@@ -4,7 +4,12 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello Iago</Text>
+      <Text style={{
+        margin: 16,
+        borderWidth: 1,
+        borderColor: 'red',
+        padding: 16
+      }}>Hello Iago</Text>
       <Button title='Tap me!' />
     </View>
   );
