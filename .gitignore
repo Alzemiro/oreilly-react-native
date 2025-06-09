@@ -1,0 +1,100 @@
+# .gitignore for a monorepo with multiple React Native projects
+#
+# Place this file in the root directory of your monorepo.
+# The `**/` pattern matches directories at any level, making it perfect
+# for ignoring dependencies in each individual project folder.
+
+# ===================================================================
+# Monorepo Specific - Ignores these files in ALL sub-projects
+# ===================================================================
+
+# Dependency directories
+**/node_modules/
+**/Pods/
+**/ios/Pods/
+
+# Build and generated directories
+**/build/
+**/android/build/
+**/android/app/build/
+**/ios/build/
+**/ios/DerivedData/
+
+# Gradle files
+**/android/.gradle/
+
+# Expo files
+**/.expo/
+**/.expo-shared/
+
+# ===================================================================
+# General React Native & Mobile
+# ===================================================================
+
+# Build output
+release/
+*.ipa
+*.apk
+*.aab
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Cache
+metro-cache/
+.watchmanconfig
+
+# Source Maps
+*.js.map
+*.js.map.json
+
+# ===================================================================
+# OS and Editor Specific
+# ===================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# Other Editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# ===================================================================
+# Sensitive Information - IMPORTANT!
+# ===================================================================
+
+# Environment variables
+# It's a best practice to create a `.env.example` file, commit it,
+# and have developers copy it to their own `.env` file.
+.env
+.env.*
+!.env.example
+
+# Xcode local environment
+.xcode.env.local
